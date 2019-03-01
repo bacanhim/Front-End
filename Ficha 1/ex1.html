@@ -11,15 +11,25 @@
 
 <body>
     <div id="app">
-        <h1>Desenvolvimento WEB {{texto}}</h1>
-        <input type="text" v-model="texto">
+        <h1>Desenvolvimento WEB</h1>
+        <input type="text" v-model="nota1">
+        <input type="text" v-model="nota2">
+        <button v-on:click="media(nota1,nota2)">Calcular a media</button> <br> <br>
+        {{ valor>9?'Aprovado':'Reprovado' }}
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.6/dist/vue.js"></script>
     <script>
         var aplicacao = new Vue({
             el: '#app',
             data: {
-                texto: 'com VueJS'
+                nota1 : 0,
+                nota2 : 0,
+                valor : 0
+            },
+            methods: {
+                media: function (nota1,nota2) {
+                    this.valor = (nota1 + nota2) / 2
+                }
             }
         })
     </script>
