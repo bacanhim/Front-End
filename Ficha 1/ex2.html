@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.6/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="mes">
+        <h1>Exercicio 2 - Mês por extenso</h1>
+        <input type="text" v-model="valor">
+        <button v-on:click="result(valor)"> Proseguir</button> <br> <br>
+        {{res}}
+    </div>
+    <script>
+        new Vue({
+            el: "#mes",
+            data: {
+               valor : "",
+               meses: ["","janeiro","fevereiro","março","abril","maio","junho", "julho","agosto","setembro", "outubro", "novembro","dezembro"],
+               res: ""
+            },
+            methods: {
+                result: function (valor) {
+                    console.log(valor)
+                    this.res=this.meses[valor*1]
+                }
+            }
+        })
+    </script>
+
+</body>
+
+</html>
