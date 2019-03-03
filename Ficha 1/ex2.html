@@ -20,14 +20,15 @@
         new Vue({
             el: "#mes",
             data: {
-               valor : "",
-               meses: ["","janeiro","fevereiro","março","abril","maio","junho", "julho","agosto","setembro", "outubro", "novembro","dezembro"],
-               res: ""
+                valor: "",
+                meses: ["", "janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto",
+                    "setembro", "outubro", "novembro", "dezembro"
+                ],
+                res: ""
             },
             methods: {
                 result: function (valor) {
-                    console.log(valor)
-                    this.res=this.meses[valor*1]
+                    this.res = this.meses[valor]
                 }
             }
         })

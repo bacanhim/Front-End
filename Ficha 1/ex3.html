@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.6/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="operacoes">
+        <h1>Exercicio 3 - Operacoes</h1>
+        <input type="text" v-model='valor1'>
+        <select v-model='op'>
+            <option value="a">+</option>
+            <option value="b">-</option>
+            <option value="c">*</option>
+            <option value="d">/</option>
+        </select>
+        <input type="text" v-model='valor2'>
+        <button v-on:click="result(valor1,valor2)"> Calcular</button>
+        {{res}}
+    </div>
+    <script>
+        new Vue({
+                    el: "#operacoes",
+                    data: {
+                        valor1: 0,
+                        valor2: 0,
+                        op: '',
+                        res: 0
+                    },
+                    methods: {
+                        result: function (valor1, valor2) {
+                            if (this.op == 'a') {
+                                this.res = parseInt(valor1) + parseInt(valor2)
+                            }
+                            if (this.op == 'b') {
+                                this.res = parseInt(valor1) - parseInt(valor2)
+                            }
+                            if (this.op == 'c') {
+                                this.res = parseInt(valor1) * parseInt(valor2)
+                            }
+                            if (this.op == 'd') {
+                                this.res = parseInt(valor1) / parseInt(valor2)
+                            }
+                        },
+                    }
+                })
+    </script>
+</body>
+
+</html>
