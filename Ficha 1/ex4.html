@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.6/dist/vue.js"></script>
+</head>
+<body>
+    <div id="multiplos">
+        <h1>Exercicio 4 - Multiplos de 5 ate 20</h1>
+        <button v-on:click="result()">Mostrar</button>
+        <p>5 * {{bla}} = {{res}}</p>
+        
+    </div>
+    <script>
+        new Vue ({
+            el: '#multiplos',
+            data:{
+                bla:1,
+                res:0
+            },
+            methods:{
+                result: function(bla){
+                    for (bla in range(1,20)){
+                        this.res=this.bla*5
+                        console.log(res)
+                    }
+                }  
+            }
+        })  
+    </script>
+</body>
+</html>
