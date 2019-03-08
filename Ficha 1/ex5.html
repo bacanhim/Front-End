@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.6/dist/vue.js"></script>
+</head>
+    <div id="soma">
+        <h1>Exercicio 5 - Soma dos primeiros 100 números inteiros</h1>
+        <button @click="result">efwe</button>
+        <p>{{total}}</p>
+    </div>
+    <script>
+        new Vue({
+            el:"#soma",
+            data:{
+                total:0,
+            },
+            methods:{
+                result:function(){
+                    
+                    for (let index = 0; index < 101; index++) {
+                        this.total=this.total+index 
+                       console.log(this.total)
+                        
+                    }
+                    // for (n in 100){
+                    //    this.total=this.total+n 
+                    //    console.log(this.total)
+                    // }  
+                }
+            }
+        })
+    </script>
+</body>
+</html>
