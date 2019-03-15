@@ -52,7 +52,7 @@ new Vue({
                 text: 'player slayed Monster for ' + damage
             });
             this.turns.unshift({
-                isPlayer: false,
+                isMonster: true,
                 text: 'Monster slayed player for ' + damage1
             });
             if(this.monsterHealth <=0){
