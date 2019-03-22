@@ -1,0 +1,65 @@
+.desvanecer-enter {
+    /* estado inicial da animaca */
+    opacity: 0;
+}
+
+.desvanecer-enter-active {
+    /* animacao em curso */
+    transition: opacity 3s;
+}
+
+.desvanecer-leave {
+    /* estado final da animacao */
+    opacity: 1;
+}
+
+.desvanecer-leave-active {
+    /* animacao em curso ate ao estado inicial */
+    transition: opacity 3s;
+    opacity: 0;
+}
+
+.deslizar-enter {
+    transform: translateY(20px);
+}
+
+.deslizar-enter-active {
+    animation: desliza-entrada 1s ease-out forwards
+}
+
+.deslizar-leave {
+    /* o forwards mantem a posivao do elemento que tinha
+    no fim da animacao, em vez de regressar a posivao inicial */
+}
+
+.deslizar-leave {
+    animation: desliza-saida 1s ease-out forwards
+}
+
+@keyframes deslizar-entrada {
+    from {
+        transform: translateY(20px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes desliza-saida {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(20px);
+    }
+}
+
+.fade-enter-active {
+    transition: opacity 0.5s;
+}
+
+.fade-enter {
+    opacity: 0;
+}
