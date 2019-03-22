@@ -88,7 +88,10 @@ new Vue({
             }       
         },
         giveUp: function () {
-
+            alert('ES MESMO FRACOOO');
+                this.gameIsRunning = false;
+                window.location.reload();
+                return;
         }
     }
 });
