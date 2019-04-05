@@ -1,6 +1,6 @@
 # ficha18
 
-> qqr coisa que nem sei
+> My neat Nuxt.js project
 
 ## Build Setup
 

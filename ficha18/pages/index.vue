@@ -1,16 +1,36 @@
 <template>
   <section class="container">
-    <nuxt-link to="/users"> Users</nuxt-link>
+    <div>
+      <logo />
+      <h1 class="title">
+        ficha18
+      </h1>
+      <h2 class="subtitle">
+        My neat Nuxt.js project
+      </h2>
+      <div class="links">
+        <a
+          href="/users"
+          class="button--green"
+        >Users</a>
+      </div>
+    </div>
   </section>
-
 </template>
 
 <script>
 import Logo from '~/components/Logo.vue'
 
 export default {
-  components: {
-    Logo
+  data(){
+    return{
+      userId:''
+    }
+  },
+  methods:{
+    onLoadUser(){
+      this.$router.push('/users/' + this.userId)
+    }
   }
 }
 </script>
