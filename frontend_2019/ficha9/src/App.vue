@@ -5,7 +5,7 @@
       <router-link :to="{name:'Login'}" class="button--green">Login</router-link>
       <a href="#" @click="logout" class="button--green">Logout</a>
     </div>
-    <img src="./assets/logo.png" alt="">
+    <!-- <img src="./assets/logo.png" alt=""> -->
     <router-view />
   </div>
 </template>
